@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍앤전 신경과신경외과</title>
+    <meta name="description" content="대구 수성구 범어동 홍앤전 신경과신경외과 — 진료시간, 진료안내, 공지사항">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="홍앤전 신경과신경외과">
+    <meta property="og:title" content="홍앤전 신경과신경외과">
+    <meta property="og:description" content="사랑과 편안함이 있는 곳 — 대구 수성구 동대구로 311 범어 애플타워">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <!-- Tailwind CSS (Play CDN) — 별도 CSS 파일 없이 유틸리티 클래스로만 스타일링한다. -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#48499c',      // 네비게이션 / 강조
+                        slateink: '#6c6c8e', // 본문 강조 · 테두리
+                        hong: '#ee8f23',     // 로고 "홍"
+                        jeon: '#fdcb08',     // 로고 "전"
+                    },
+                    fontFamily: {
+                        sans: ['"Apple SD Gothic Neo"', '"Malgun Gothic"', '"맑은 고딕"', 'system-ui', 'sans-serif'],
+                    },
+                    keyframes: {
+                        fadeup: { '0%': { opacity: 0, transform: 'translateY(8px)' }, '100%': { opacity: 1, transform: 'none' } },
+                    },
+                    animation: { fadeup: 'fadeup .35s ease-out both' },
+                },
+            },
+        };
+    </script>
+
+    <!-- display 유틸리티(grid/flex 등)가 UA 기본 [hidden] 규칙을 이겨 버리므로 명시적으로 눌러 준다. -->
+    <style>[hidden] { display: none !important; }</style>
+
+    <script type="module" src="/js/app.js"></script>
+</head>
+<body class="flex min-h-screen flex-col bg-white font-sans text-slate-800 antialiased">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-40 border-b border-slate-200/70 bg-white/85 backdrop-blur">
+        <nav class="mx-auto flex max-w-[1300px] items-center justify-between gap-3 px-4 py-3 sm:px-6">
+            <a href="/intro"
+               class="relative shrink-0 text-sm font-semibold text-ink after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:w-0 after:bg-ink after:transition-all after:duration-300 hover:after:w-full sm:text-base">
+                본원소개
+            </a>
+
+            <a href="/" class="flex min-w-0 items-center gap-1.5 sm:gap-2" aria-label="홍앤전 신경과신경외과 홈">
+                <img src="/images/apple.png" alt="" class="h-6 w-auto sm:h-8">
+                <span class="truncate text-base font-bold tracking-tight text-slate-700 sm:text-xl">
+                    <span class="text-hong">홍</span><span class="text-xs align-middle text-slate-400">&amp;</span><span class="text-jeon">전</span>신경과·신경외과
+                </span>
+            </a>
+
+            <a href="/info"
+               class="relative shrink-0 text-sm font-semibold text-ink after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:w-0 after:bg-ink after:transition-all after:duration-300 hover:after:w-full sm:text-base">
+                진료정보
+            </a>
+        </nav>
+    </header>
+
+    <!-- 라우터가 /pages/*.html 조각을 여기에 렌더링한다. -->
+    <main id="app" class="flex-1"></main>
+
+    <noscript>
+        <div class="mx-auto max-w-2xl px-6 py-24 text-lg leading-relaxed text-slateink">
+            <h2 class="mb-6 text-2xl font-bold">홍앤전 신경과신경외과</h2>
+            <p>
+                이 사이트는 자바스크립트로 동작합니다. 브라우저에서 자바스크립트를 켜 주세요.<br><br>
+                대구광역시 수성구 범어동 563-4 애플타워 8층<br>
+                진료문의 TEL. 053-743-0920 / 053-753-0920<br>
+                진료시간 평일·공휴일 09:00-18:00 (점심 13:00-14:00), 토·일 휴진
+            </p>
+        </div>
+    </noscript>
+
+    <!-- FOOTER -->
+    <footer class="mt-16 border-t border-slate-200 bg-[#f7f7f7]">
+        <div class="mx-auto flex max-w-[1300px] flex-col gap-6 px-4 py-10 sm:px-6 md:flex-row md:items-center md:justify-between">
+            <a href="/" class="flex items-center gap-3">
+                <img src="/images/apple_b.png" alt="" class="h-8 w-auto">
+                <span class="text-lg font-extrabold text-slate-400 sm:text-xl">홍앤전 신경과신경외과</span>
+            </a>
+            <p class="text-sm leading-7 tracking-wide text-slateink md:text-right">
+                대구광역시 수성구 범어동 563-4 애플타워 8층 홍앤전신경과신경외과<br>
+                TEL. 053.743.0920 / 053.753.0920
+            </p>
+        </div>
+    </footer>
+
+    <!-- 공용 모달 — 장비 설명, 비급여 안내표에서 함께 사용한다. -->
+    <div id="modal" hidden class="fixed inset-0 z-50">
+        <div data-modal-close class="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
+        <div class="relative flex h-full items-center justify-center p-4">
+            <div role="dialog" aria-modal="true" aria-labelledby="modal-title"
+                 class="flex max-h-[88vh] w-full max-w-2xl animate-fadeup flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
+                <div class="flex items-start justify-between gap-4 border-b border-slate-200 px-5 py-4 sm:px-7">
+                    <h2 id="modal-title" class="border-l-4 border-slateink pl-3 text-lg font-bold leading-snug text-slate-800 sm:text-xl"></h2>
+                    <button type="button" data-modal-close aria-label="닫기"
+                            class="-mr-1 shrink-0 rounded-lg p-1.5 text-2xl leading-none text-slate-400 transition hover:bg-slate-100 hover:text-slate-700">
+                        &times;
+                    </button>
+                </div>
+                <div id="modal-body" class="overflow-y-auto px-5 py-5 text-[15px] leading-7 text-slate-700 sm:px-7"></div>
+                <div class="border-t border-slate-200 px-5 py-3 text-right sm:px-7">
+                    <button type="button" data-modal-close
+                            class="rounded-lg border-2 border-slateink px-5 py-2 text-sm font-semibold text-slateink transition hover:bg-slateink hover:text-white">
+                        닫기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

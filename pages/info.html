@@ -1,0 +1,114 @@
+<!-- 진료정보 -->
+
+<section class="bg-[url('/images/main_bg.png')] bg-cover bg-center">
+    <div class="mx-auto max-w-[1300px] px-4 pb-14 pt-16 sm:px-6 sm:pt-24">
+        <p class="text-3xl font-light text-slateink/60 sm:text-5xl">MEDICAL INFORMATION</p>
+        <p class="mt-3 text-base text-slateink/80 sm:text-2xl">
+            건강한 삶을 만들어가요, 스스로 건강 CHECK!
+        </p>
+    </div>
+</section>
+
+<section class="bg-white">
+    <div class="mx-auto max-w-[1300px] px-4 py-12 sm:px-6">
+
+        <!-- 진료과목 탭 -->
+        <ul class="grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-slate-200 sm:grid-cols-3 lg:grid-cols-5">
+            <li>
+                <button type="button" data-sec="1" class="flex h-full w-full flex-col items-center gap-3 bg-white px-3 py-7 text-center transition">
+                    <img src="/images/icon_1.png" alt="" class="h-16 w-16 object-contain">
+                    <span class="text-[15px] font-medium text-slate-700">혈액순환 / 두통</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" data-sec="2" class="flex h-full w-full flex-col items-center gap-3 bg-white px-3 py-7 text-center transition">
+                    <img src="/images/icon_3.png" alt="" class="h-16 w-16 object-contain">
+                    <span class="text-[15px] font-medium text-slate-700">척추디스크 / 협착증</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" data-sec="3" class="flex h-full w-full flex-col items-center gap-3 bg-white px-3 py-7 text-center transition">
+                    <img src="/images/icon_2.png" alt="" class="h-16 w-16 object-contain">
+                    <span class="text-[15px] font-medium text-slate-700">어지럼증 / 이명</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" data-sec="4" class="flex h-full w-full flex-col items-center gap-3 bg-white px-3 py-7 text-center transition">
+                    <img src="/images/icon_4.png" alt="" class="h-16 w-16 object-contain">
+                    <span class="text-[15px] font-medium text-slate-700">신경 / 손발저림</span>
+                </button>
+            </li>
+            <li class="col-span-2 sm:col-span-1">
+                <button type="button" data-sec="5" class="flex h-full w-full flex-col items-center gap-3 bg-white px-3 py-7 text-center transition">
+                    <img src="/images/icon_5.png" alt="" class="h-16 w-16 object-contain">
+                    <span class="text-[15px] font-medium text-slate-700">오십견 / 관절통증</span>
+                </button>
+            </li>
+        </ul>
+
+        <!-- 진료 항목 -->
+        <div class="mt-10">
+            <div data-panel="1" hidden class="grid animate-fadeup gap-4 sm:grid-cols-3">
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">두통</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">치매</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">중풍</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">동맥경화</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">고혈압</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">당뇨</span>
+            </div>
+
+            <div data-panel="2" hidden class="grid animate-fadeup gap-4 sm:grid-cols-3">
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-xl font-extrabold text-[#9998B1] sm:text-2xl">신경성형술<span class="block text-base font-semibold">(비수술)</span></span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-xl font-extrabold text-[#9998B1] sm:text-2xl">신경차단술<span class="block text-base font-semibold">(비수술)</span></span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">골다공증</span>
+            </div>
+
+            <div data-panel="3" hidden class="grid animate-fadeup gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">검사</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">진단</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">주사요법</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">약물요법</span>
+            </div>
+
+            <div data-panel="4" hidden class="grid animate-fadeup gap-4 sm:grid-cols-3">
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">눈꺼풀떨림</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">안면마비</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">파킨슨</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">운동장애</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">수면장애</span>
+            </div>
+
+            <div data-panel="5" hidden class="grid animate-fadeup gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">무릎관절</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">주사요법</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">프롤로치료</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">스포츠손상</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">PRP</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">교통사고</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-xl font-extrabold text-[#9998B1] sm:text-2xl">경추 · 요추 외상</span>
+                <span class="rounded-2xl bg-slate-50 px-4 py-10 text-center text-2xl font-extrabold text-[#9998B1] sm:text-3xl">뇌진탕</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-[url('/images/main_bg.png')] bg-cover bg-center">
+    <div class="mx-auto max-w-[1300px] px-4 py-16 text-right sm:px-6">
+        <p class="text-3xl font-light text-slateink sm:text-5xl">NEUROLOGY &amp; NEUROSURGERY</p>
+        <p class="mt-3 text-base text-slateink/80 sm:text-2xl">사랑과 편안함이 있는 곳 홍앤전 신경과신경외과</p>
+    </div>
+</section>
+
+<section class="bg-white">
+    <div class="mx-auto max-w-[1300px] px-4 py-16 text-right sm:px-6">
+        <p class="text-[15px] leading-9 tracking-tight text-slate-700 sm:text-base">
+            몸이 아플 때 옆에 있어주는 사람이 자신에게 가장 소중한 사람이라고 합니다.<br>
+            저희도 환자 한 분 한 분의 소중한 사람이 되고자, 항상 곁에서 꼼꼼한 진단과 온 힘을 다하는 치료를 위해 항상 노력하겠습니다.
+        </p>
+        <p class="mt-8 text-[15px] leading-9 tracking-tight text-slate-700 sm:text-base">
+            홍앤전 신경과신경외과의원은 사랑과 편안함이 있는 곳으로<br>
+            언제든지 건강에 대한 궁금한 점이 있으실 때 내원해주시면 친절하게 상담해드리겠습니다. 감사합니다.
+        </p>
+        <p class="mt-8 text-[15px] font-semibold text-slate-700 sm:text-base">홍앤전 신경과신경외과의원 일동</p>
+    </div>
+</section>

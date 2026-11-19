@@ -1,0 +1,11 @@
+{
+  "name": "hongjeon-spa",
+  "version": "2.0.0",
+  "private": true,
+  "description": "홍앤전 신경과신경외과 — 빌드 없는 정적 SPA",
+  "type": "module",
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "start": "node dev-server.mjs"
+  }
+}

@@ -1,0 +1,158 @@
+<!-- 메인 -->
+
+<!-- HERO -->
+<section class="relative flex min-h-[calc(100vh-4rem)] items-center bg-[url('/images/bg.jpg')] bg-cover bg-center">
+    <div class="absolute inset-0 bg-gradient-to-b from-white/40 via-white/20 to-white/60"></div>
+
+    <div class="relative mx-auto w-full max-w-[1300px] px-4 py-16 sm:px-6">
+        <div class="text-center">
+            <p class="text-sm tracking-[0.35em] text-slate-600 sm:text-lg">사랑과 편안함이 있는 곳</p>
+            <h1 class="mt-4 text-3xl font-bold leading-tight text-slate-800 drop-shadow-[0_2px_10px_rgba(255,255,255,0.8)] sm:text-5xl lg:text-6xl">
+                <span class="text-hong">홍</span>앤<span class="text-jeon">전</span> 신경과신경외과
+            </h1>
+        </div>
+
+        <div class="mx-auto mt-12 grid max-w-3xl gap-4 sm:grid-cols-2 sm:gap-6 lg:mx-0 lg:ml-auto lg:mt-20">
+            <div class="rounded-2xl bg-white/70 p-6 backdrop-blur-sm transition hover:bg-white/90">
+                <h2 class="border-t-[3px] border-slate-600 pt-3 text-lg font-bold text-slate-800">진료시간</h2>
+                <p class="mt-3 text-[15px] leading-8 text-slate-700">
+                    평일 09:00 - 18:00<br>
+                    공휴일 09:00 - 18:00<br>
+                    점심시간 13:00 - 14:00<br>
+                    <span class="font-medium text-slate-500">토요일, 일요일 휴진</span>
+                </p>
+            </div>
+            <div class="rounded-2xl bg-white/70 p-6 backdrop-blur-sm transition hover:bg-white/90">
+                <h2 class="border-t-[3px] border-slate-600 pt-3 text-lg font-bold text-slate-800">진료문의</h2>
+                <p class="mt-3 text-[15px] leading-8 tracking-wide text-slate-700">
+                    TEL. 053-743-0920<br>
+                    053-753-0920<br>
+                    FAX. 053-242-0920
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 진료과목 -->
+<section class="mx-auto max-w-[1300px] px-4 py-12 sm:px-6">
+    <ul class="grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-slate-200 sm:grid-cols-3 lg:grid-cols-5">
+        <li>
+            <a href="/info?sec=01" class="flex h-full flex-col items-center gap-3 bg-white px-3 py-7 text-center transition hover:bg-slate-50 hover:shadow-[inset_0_-4px_0_0_teal]">
+                <img src="/images/icon_1.png" alt="" class="h-16 w-16 object-contain">
+                <span class="text-[15px] font-medium text-slate-700">혈액순환 / 두통</span>
+            </a>
+        </li>
+        <li>
+            <a href="/info?sec=02" class="flex h-full flex-col items-center gap-3 bg-white px-3 py-7 text-center transition hover:bg-slate-50 hover:shadow-[inset_0_-4px_0_0_teal]">
+                <img src="/images/icon_3.png" alt="" class="h-16 w-16 object-contain">
+                <span class="text-[15px] font-medium text-slate-700">척추디스크 / 협착증</span>
+            </a>
+        </li>
+        <li>
+            <a href="/info?sec=03" class="flex h-full flex-col items-center gap-3 bg-white px-3 py-7 text-center transition hover:bg-slate-50 hover:shadow-[inset_0_-4px_0_0_teal]">
+                <img src="/images/icon_2.png" alt="" class="h-16 w-16 object-contain">
+                <span class="text-[15px] font-medium text-slate-700">어지럼증 / 이명</span>
+            </a>
+        </li>
+        <li>
+            <a href="/info?sec=04" class="flex h-full flex-col items-center gap-3 bg-white px-3 py-7 text-center transition hover:bg-slate-50 hover:shadow-[inset_0_-4px_0_0_teal]">
+                <img src="/images/icon_4.png" alt="" class="h-16 w-16 object-contain">
+                <span class="text-[15px] font-medium text-slate-700">손발저림</span>
+            </a>
+        </li>
+        <li class="col-span-2 sm:col-span-1">
+            <a href="/info?sec=05" class="flex h-full flex-col items-center gap-3 bg-white px-3 py-7 text-center transition hover:bg-slate-50 hover:shadow-[inset_0_-4px_0_0_teal]">
+                <img src="/images/icon_5.png" alt="" class="h-16 w-16 object-contain">
+                <span class="text-[15px] font-medium text-slate-700">오십견 / 관절통증</span>
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- 공지사항 · 갤러리 · 비급여 안내 -->
+<section class="mx-auto max-w-[1300px] px-4 pb-16 sm:px-6">
+    <div class="grid gap-8 lg:grid-cols-2 lg:gap-12">
+
+        <!-- 공지사항 -->
+        <div class="min-w-0 rounded-2xl bg-[#f7f7f7] p-6 sm:p-8 lg:self-start">
+            <div class="flex items-center justify-between gap-4">
+                <h2 class="flex items-center gap-3 text-xl font-bold text-slate-800">
+                    <span class="inline-block h-7 w-1 rounded bg-slate-600"></span>
+                    공지사항
+                </h2>
+                <a href="/post_list" class="shrink-0 text-sm text-slate-500 transition hover:text-ink">더보기 +</a>
+            </div>
+
+            <ul class="mt-5">
+                <li>
+                    <a href="/post_list/4" class="group flex items-baseline gap-4 border-b border-slate-200 py-3">
+                        <span class="min-w-0 flex-1 truncate text-[15px] text-slate-700 transition group-hover:text-ink">진료시간 변경안내 (평일·공휴일 진료, 토요일 휴진)</span>
+                        <time class="shrink-0 text-sm tabular-nums text-slate-400">2025-05-10</time>
+                    </a>
+                </li>
+                <li>
+                    <a href="/post_list/3" class="group flex items-baseline gap-4 border-b border-slate-200 py-3">
+                        <span class="min-w-0 flex-1 truncate text-[15px] text-slate-700 transition group-hover:text-ink">비급여목록 중 변동사항 안내입니다</span>
+                        <time class="shrink-0 text-sm tabular-nums text-slate-400">2025-04-05</time>
+                    </a>
+                </li>
+                <li>
+                    <a href="/post_list/2" class="group flex items-baseline gap-4 border-b border-slate-200 py-3">
+                        <span class="min-w-0 flex-1 truncate text-[15px] text-slate-700 transition group-hover:text-ink">궁금하신 사항이나 진료문의는 전화상담 부탁드립니다</span>
+                        <time class="shrink-0 text-sm tabular-nums text-slate-400">2021-03-26</time>
+                    </a>
+                </li>
+                <li>
+                    <a href="/post_list/1" class="group flex items-baseline gap-4 py-3">
+                        <span class="min-w-0 flex-1 truncate text-[15px] text-slate-700 transition group-hover:text-ink">홈페이지 새롭게 바뀌었습니다</span>
+                        <time class="shrink-0 text-sm tabular-nums text-slate-400">2021-03-26</time>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 갤러리 + 비급여 안내 -->
+        <div class="min-w-0">
+            <div data-slider>
+                <div data-viewport class="cursor-grab touch-pan-y select-none overflow-hidden rounded-2xl bg-slate-100 active:cursor-grabbing">
+                    <div data-slides class="flex ease-in-out will-change-transform" style="transition-property: transform;">
+                        <div class="w-full shrink-0"><img draggable="false" src="/images/6입구전경.jpg" alt="입구 전경" class="aspect-[3/2] w-full object-cover"></div>
+                        <div class="w-full shrink-0"><img draggable="false" src="/images/6내부전경.jpg" alt="내부 전경" class="aspect-[3/2] w-full object-cover"></div>
+                        <div class="w-full shrink-0"><img draggable="false" src="/images/6대기실.jpg" alt="대기실" class="aspect-[3/2] w-full object-cover"></div>
+                        <div class="w-full shrink-0"><img draggable="false" src="/images/6접수대.jpg" alt="접수대" class="aspect-[3/2] w-full object-cover"></div>
+                        <div class="w-full shrink-0"><img draggable="false" src="/images/6초음파검사실.jpg" alt="초음파 검사실" class="aspect-[3/2] w-full object-cover"></div>
+                        <div class="w-full shrink-0"><img draggable="false" src="/images/6뇌혈류검사실.jpg" alt="뇌혈류 검사실" class="aspect-[3/2] w-full object-cover"></div>
+                        <div class="w-full shrink-0"><img draggable="false" src="/images/8첨단_CT장비.jpg" alt="첨단 CT 장비" class="aspect-[3/2] w-full object-cover"></div>
+                        <div class="w-full shrink-0"><img draggable="false" src="/images/8물리치료실.jpg" alt="물리치료실" class="aspect-[3/2] w-full object-cover"></div>
+                        <div class="w-full shrink-0"><img draggable="false" src="/images/8경동맥초음파.jpg" alt="경동맥 초음파" class="aspect-[3/2] w-full object-cover"></div>
+                    </div>
+                </div>
+
+                <div class="mt-4 flex items-center justify-between gap-4">
+                    <p class="text-sm text-slate-400">의료가 이루어지는 곳인만큼 항상 청결한 환경을 위해 노력합니다.</p>
+                    <div data-dots class="flex shrink-0 items-center gap-1.5"></div>
+                </div>
+            </div>
+
+            <div class="mt-6 grid grid-cols-2 gap-3">
+                <button type="button" data-price="step1"
+                        class="rounded-xl bg-slate-100 px-4 py-3.5 text-[15px] font-semibold tracking-widest text-slate-600 transition hover:bg-slateink hover:text-white hover:shadow-lg">
+                    검사비용
+                </button>
+                <button type="button" data-price="step2"
+                        class="rounded-xl bg-slate-100 px-4 py-3.5 text-[15px] font-semibold tracking-widest text-slate-600 transition hover:bg-slateink hover:text-white hover:shadow-lg">
+                    제증명수수료
+                </button>
+                <button type="button" data-price="step3"
+                        class="rounded-xl bg-slate-100 px-4 py-3.5 text-[15px] font-semibold tracking-widest text-slate-600 transition hover:bg-slateink hover:text-white hover:shadow-lg">
+                    약제비
+                </button>
+                <button type="button" data-price="step4"
+                        class="rounded-xl bg-slate-100 px-4 py-3.5 text-[15px] font-semibold tracking-widest text-slate-600 transition hover:bg-slateink hover:text-white hover:shadow-lg">
+                    치료재료대
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
