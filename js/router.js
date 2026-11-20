@@ -1,4 +1,4 @@
-import { routes, notFound, matchPost, LEGACY_POSTS } from './routes.js';
+import { routes, notFound, matchPost } from './routes.js';
 import { initModal, closeModal } from './modal.js';
 
 const app = () => document.getElementById('app');
@@ -16,18 +16,6 @@ function normalize(pathname) {
     p = p.replace(/\/+$/, '');
 
     return p === '' ? '/' : p;
-}
-
-// 옛 게시물 번호로 들어오면 주소창을 새 번호로 바꿔 준다.
-function applyRedirect(url) {
-    const m = /^\/post_list\/([^/]+)$/.exec(normalize(url.pathname));
-    const moved = m && LEGACY_POSTS[m[1]];
-    if (!moved) return url;
-
-    const next = new URL(`/post_list/${moved}${url.search}`, location.href);
-    history.replaceState({}, '', next);
-
-    return next;
 }
 
 function resolve(pathname) {
@@ -110,11 +98,10 @@ export async function navigate(href, { replace = false, scroll = true } = {}) {
         return;
     }
 
-    const target = applyRedirect(url);
-    const route = resolve(target.pathname);
+    const route = resolve(url.pathname);
 
-    if (replace) history.replaceState({}, '', target);
-    else history.pushState({}, '', target);
+    if (replace) history.replaceState({}, '', url);
+    else history.pushState({}, '', url);
 
     // 같은 뷰에서 쿼리만 달라진 경우(예: /info?sec=03)는 모듈만 다시 실행한다.
     if (current && current.view === route.view) {
@@ -123,10 +110,10 @@ export async function navigate(href, { replace = false, scroll = true } = {}) {
 
         if (currentModule && typeof currentModule.mount === 'function') {
             if (typeof currentModule.unmount === 'function') currentModule.unmount();
-            currentModule.mount(target);
+            currentModule.mount(url);
         }
     } else {
-        await render(route, target);
+        await render(route, url);
     }
 
     if (scroll) window.scrollTo(0, 0);
@@ -184,11 +171,11 @@ export function start() {
     document.addEventListener('click', onClick);
     document.addEventListener('pointerover', onPointerOver);
     window.addEventListener('popstate', () => {
-        const url = applyRedirect(new URL(location.href));
+        const url = new URL(location.href);
         render(resolve(url.pathname), url);
     });
 
-    const url = applyRedirect(new URL(location.href));
+    const url = new URL(location.href);
 
     return render(resolve(url.pathname), url);
 }

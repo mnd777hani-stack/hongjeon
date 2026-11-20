@@ -1,9 +1,5 @@
 # 홍앤전 신경과신경외과 (hongjeon.co.kr)
 
-Node.js(Express + EJS + MySQL) 기반이던 사이트를 **빌드 없는 정적 SPA**로 전환한 결과물입니다.
-서버 프로그램과 데이터베이스가 없고, 스타일은 **Tailwind CSS 유틸리티 클래스로만** 작성합니다
-(별도 `.css` 파일 없음). GitHub Pages로 배포합니다.
-
 ## 로컬 실행
 
 ```bash
@@ -13,7 +9,7 @@ PORT=3000 npm run dev
 
 `dev-server.mjs`는 외부 의존성이 없는 Node 기본 모듈 전용 서버입니다(`npm install` 불필요).
 **실제 파일이 있으면 그 파일을, 없으면 `index.html`을** 돌려주는 SPA fallback 방식으로 GitHub Pages(404.html fallback)와
-동작이 같습니다. 그래서 `/post_list/14` 같은 주소를 새로고침하거나 직접 열어도 로컬과
+동작이 같습니다. 그래서 `/post_list/4` 같은 주소를 새로고침하거나 직접 열어도 로컬과
 배포본이 동일하게 동작합니다.
 
 > `python3 -m http.server`로도 첫 화면은 뜨지만 SPA fallback이 없어 깊은 주소 새로고침이
@@ -62,7 +58,7 @@ images/ txt/        정적 리소스
 | `/post_list/{1,2,3,4}` | `pages/post-*.html` | 공지사항 본문 |
 | 그 외 | `pages/404.html` | |
 
-라우터가 끝 슬래시와 `.html`을 정규화하므로 `/intro/`, `/post_list/14.html` 같은 기존 주소로
+라우터가 끝 슬래시와 `.html`을 정규화하므로 `/intro/`, `/post_list/4.html` 같은 주소로
 들어와도 같은 화면이 열립니다.
 
 ## 스타일 — Tailwind
@@ -98,9 +94,6 @@ DB가 없으므로 게시물은 조각 파일로 관리합니다.
 3. `pages/post_list.html`의 `<li>` 블록을 최신 글이 위로 오도록 추가합니다.
 4. `pages/main.html`의 공지 영역에 최신 4건을 맞춥니다.
 5. 새 글의 이전글 링크와 직전 글의 다음글 링크를 서로 연결합니다.
-
-> 옛 주소(DB 시절 IDX) `/post_list/12`, `/post_list/14` 는 `js/routes.js`의 `LEGACY_POSTS`가
-> 새 번호로 넘겨 줍니다. 번호 체계를 또 바꾸면 이 표도 함께 갱신하세요.
 
 ## 비급여 금액 수정
 

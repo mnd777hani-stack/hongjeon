@@ -9,9 +9,6 @@ const SITE = '홍앤전 신경과신경외과';
 // 공지사항 게시물 — 새 글을 추가할 때 이 배열에 번호를 넣어야 라우팅이 잡힌다.
 export const POSTS = ['1', '2', '3', '4'];
 
-// DB 시절 IDX 로 들어오는 옛 주소를 새 번호로 넘겨 준다. (/post_list/14 → /post_list/4)
-export const LEGACY_POSTS = { '12': '3', '14': '4' };
-
 export const routes = [
     {
         path: '/',
