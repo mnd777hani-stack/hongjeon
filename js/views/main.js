@@ -1,7 +1,12 @@
 // 메인 — 갤러리 슬라이드(한 방향 자동 진행 + 드래그), 비급여 안내 모달
 
 import { openModal } from '../modal.js';
-import { PRICES, renderPriceTable } from '../data/prices.js';
+
+// 비급여 금액이 바뀌면 이 이미지 파일만 교체하면 된다.
+const PRICE_SHEET = {
+    title: '비급여내역표',
+    src: '/images/비급여내역표.jpg',
+};
 
 const INTERVAL = 2000;   // 자동 전환 간격
 const DURATION = 450;    // 슬라이드가 미끄러지는 시간
@@ -179,13 +184,17 @@ function initSlider() {
 /* ------------------------------------------------------------- 비급여 안내 모달 */
 
 function initPriceButtons() {
-    document.querySelectorAll('[data-price]').forEach((btn) => {
-        const key = btn.dataset.price;
-        if (!PRICES[key]) return;
-
+    document.querySelectorAll('[data-price-sheet]').forEach((btn) => {
         const onClick = (e) => {
             e.preventDefault();
-            openModal({ title: PRICES[key].title, html: renderPriceTable(key), wide: true });
+            openModal({
+                title: PRICE_SHEET.title,
+                html: `
+                    <p class="mb-4 text-sm text-slate-500">아래 금액은 비급여 항목으로 건강보험이 적용되지 않습니다.</p>
+                    <img src="${PRICE_SHEET.src}" alt="비급여내역표 — 약제비, 제증명수수료, 검사비용, 치료재료대"
+                         class="mx-auto w-full rounded-lg border border-slate-200">`,
+                wide: true,
+            });
         };
 
         btn.addEventListener('click', onClick);

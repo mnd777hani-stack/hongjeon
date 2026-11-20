@@ -41,7 +41,7 @@ js/app.js           진입점
 js/router.js        라우터 — 경로 정규화, 조각 fetch/캐시, 링크 가로채기, prefetch
 js/routes.js        라우트 표 (경로 · 조각 · 모듈 · title/description)
 js/modal.js         공용 모달 (열기/닫기, ESC·배경 클릭)
-js/data/prices.js   비급여 안내 4종 (검사비용·제증명수수료·약제비·치료재료대)
+images/비급여내역표.jpg  비급여 안내 (메인 '비급여내역표' 버튼 모달)
 js/data/equipment.js 보유장비 13종 설명 + 내부전경 사진 목록
 js/views/main.js    메인 — 갤러리 슬라이드, 비급여 모달
 js/views/intro.js   본원소개 — 장비/전경 전환, 설명 모달, 네이버 지도
@@ -104,7 +104,7 @@ DB가 없으므로 게시물은 조각 파일로 관리합니다.
 
 ## 비급여 금액 수정
 
-`js/data/prices.js`의 `rows` 배열(`[항목, 금액]`)만 고치면 메인 버튼에서 열리는 모달에 반영됩니다.
+`images/비급여내역표.jpg` 이미지를 같은 이름으로 교체하면 메인 '비급여내역표' 버튼 모달에 반영됩니다.
 
 ## 정적화하면서 없어진 기능
 
