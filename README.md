@@ -25,6 +25,14 @@ PORT=3000 npm run dev
 - `CNAME`에 커스텀 도메인(hongjeon.co.kr)이 지정되어 있습니다. 루트 경로(`/`) 기준이므로
   도메인 없이 `<계정>.github.io/<저장소>/`로 배포하면 절대 경로가 깨집니다.
 
+## 데모 배포 (Vercel)
+
+외부 확인용 데모는 `demo` 브랜치를 Vercel로 배포합니다. 운영(GitHub Pages)과는 별개입니다.
+
+- `vercel.json`의 `ignoreCommand`가 `demo` 이외 브랜치의 Vercel 빌드를 건너뜁니다.
+- 같은 파일의 `rewrites`가 모르는 경로를 `index.html`로 돌려 SPA 새로고침을 처리합니다.
+- GitHub Pages 워크플로는 `main`에서만 돌고 `vercel.json`을 복사하지 않으므로 운영에는 영향이 없습니다.
+
 ## 구조
 
 ```
